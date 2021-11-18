@@ -1,0 +1,20 @@
+{
+  "name": "mfe-ecommerce-example",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "demo/*"
+  ],
+  "scripts": {
+    "deps": "yarn workspaces run deps",
+    "build": "yarn workspaces run build",
+    "start": "concurrently \"wsrun --parallel start\"",
+    "clean": "rm -fr node_modules demo/**/node_modules && yarn run clean:dist",
+    "clean:dist": "rm -fr node_modules demo/**/dist"
+  },
+  "dependencies": {
+    "concurrently": "^5.3.0",
+    "webpack": "^5.64.1",
+    "wsrun": "^5.2.4"
+  }
+}
