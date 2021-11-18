@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "6Ms+EwSv7qwrKHrgMu5+XTm0QXSfwnZQEGfl/UNRLQQ=",
+  "Source": "FederatedExampleService",
+  "BasePath": "_content/FederatedExampleService",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
