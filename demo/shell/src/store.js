@@ -16,6 +16,11 @@ const reducer = (state = initialState, {type, payload}) =>
         draft.items.splice(id, 1);
         return draft;
       }
+      case 'search': {
+        const { value } = type;
+        const works = state.items.filter(val => val.includes(value));
+        return { ...state, value, works };
+      }
       default: {
         return draft;
       }
