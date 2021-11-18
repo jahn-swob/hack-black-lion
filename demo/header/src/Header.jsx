@@ -7,7 +7,7 @@ import "./styles/index.css";
 const Landing = React.lazy(() => import("team-landing/Landing"));
 const Checkout = React.lazy(() => import("team-checkout/Checkout"));
 const Cart = React.lazy(() => import("team-checkout/Cart"));
-const Search = React.lazy(() => import("search/search"));
+const Search = React.lazy(() => import("team-search/Search"));
 
 const NavLinks = ({location}) => {
   return (
@@ -31,8 +31,9 @@ const Header = () => {
         <h2>Black Lion e-commerce</h2>
         <LinksWrapper />
         <div className="ecommerce-nav">
-          
-          <p>Search</p>
+          <React.Suspense fallback={<div/>}>
+            <Search />
+          </React.Suspense>
           <React.Suspense fallback={<div />}>
             <Cart />
           </React.Suspense>
