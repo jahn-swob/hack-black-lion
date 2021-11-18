@@ -40,16 +40,13 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "checkout",
+      name: "search",
       filename: "remoteEntry.js",
       remotes: {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js"
       },
       exposes: {
-        "./Checkout": "./src/federated/Checkout",
-        "./BuyButton": "./src/federated/BuyButton",
-        "./Cart": "./src/federated/Cart",
         "./Search": "./src/federated/Search"
       },
       shared: {

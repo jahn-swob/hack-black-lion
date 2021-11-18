@@ -47,6 +47,7 @@ module.exports = {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js",
         "team-checkout": "checkout@http://localhost:3002/remoteEntry.js",
+        "team-search": "search@http://localhost:3003/remoteEntry.js",
       },
       exposes: {
         "./Store": "./src/store",
