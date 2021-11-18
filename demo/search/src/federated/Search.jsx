@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import "./../styles/index.css";
 
-export const Search = ({items}) => {
+export const Search = () => {
   return (
     <div className="checkoutPage">
       <h2>Search</h2>
@@ -33,9 +33,7 @@ const handleSubmit = userInput => {
 //     <button className="checkoutButton" onClick={() => addToCart(payload)}>{children}</button>
 //     );
 
-const mapStateToPros = state => ({
-  items: state.items
-})
+const mapStateToPros = state => ({ items: state.items });
 
 // export default connect(null, (dispatch) => ({
 //   addToCart: (payload) => dispatch(buyItem(payload))
