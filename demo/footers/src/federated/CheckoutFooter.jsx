@@ -3,8 +3,8 @@ import "./../styles/index.css";
 
 const CheckoutFooter = () => {
   return (
-    <div className="footer">
-      <h2>Contact us</h2>
+    <div className="checkout-footer">
+      <h2>Footer for Checkout. Contact us</h2>
     </div>
   )
 };
