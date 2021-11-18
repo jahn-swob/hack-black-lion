@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3002/",
+    publicPath: "http://localhost:3003/",
   },
 
   resolve: {
@@ -12,7 +12,7 @@ module.exports = {
   },
 
   devServer: {
-    port: 3002,
+    port: 3003,
   },
 
   module: {
@@ -50,6 +50,7 @@ module.exports = {
         "./Checkout": "./src/federated/Checkout",
         "./BuyButton": "./src/federated/BuyButton",
         "./Cart": "./src/federated/Cart",
+        "./Search": "./src/federated/Search"
       },
       shared: {
         ...deps,
