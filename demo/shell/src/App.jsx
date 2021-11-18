@@ -9,9 +9,7 @@ import "./styles/index.css";
 
 const Shell = () => (
   <Provider store={store}>
-    <div className="site">
-      <Router  />
-    </div>
+    <Router  />
   </Provider>
 );
 
