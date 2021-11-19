@@ -17,7 +17,7 @@ namespace MicroService.Models.Search
         [JsonPropertyName("product_url")]
         public string ProductUrl { get; set; } = string.Empty;
 
-        [JsonPropertyName("image_url")]
+        [JsonPropertyName("image")]
         public string ImageUrl { get; set; } = string.Empty;
 
         [JsonPropertyName("rank")]
@@ -35,7 +35,7 @@ namespace MicroService.Models.Search
         [JsonPropertyName("regular_price")]
         public int RegularPrice { get; set; }
 
-        [JsonPropertyName("current_price")]
+        [JsonPropertyName("price")]
         public int CurrentPrice { get; set; }
     }
 }
