@@ -1,0 +1,21 @@
+.landingPage {
+  padding: 20px;
+  background: white;
+}
+
+.landingPage h2{
+  margin: 0px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2em;
+}
+
+.productList {
+  display: flex;
+  margin-top: 20px;
+  padding: 20px;
+  /*background: #f9f9f9;*/
+  justify-content: space-evenly;
+}
+
