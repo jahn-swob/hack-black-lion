@@ -32,7 +32,7 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-app.UseCors();
+app.UseCors(LocalOrigins);
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

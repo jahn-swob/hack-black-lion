@@ -41,11 +41,12 @@ const Routes = () => {
         </Route>
         <Route path="/checkout">
           <CheckoutRoute />
+          <React.Suspense fallback={<div />}>
+              <Footer />
+          </React.Suspense>
         </Route>
       </Switch>
-      <React.Suspense fallback={<div />}>
-        <Footer />
-      </React.Suspense>
+      
   </Router>)}
 
 export default Routes;
