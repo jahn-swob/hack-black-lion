@@ -53,7 +53,7 @@ module.exports = {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js",
         "team-footers": "footers@http://localhost:3004/remoteEntry.js",
-        "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js"
+        "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js",
       },
       exposes: {
         "./Checkout": "./src/federated/Checkout",
