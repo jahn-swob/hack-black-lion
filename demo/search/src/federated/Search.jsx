@@ -4,19 +4,20 @@ import "./../styles/index.css";
 
 export const Search = () => {
   return (
-    <div className="checkoutPage">
-      <h2>Search</h2>
+    <div className="search-bar-container">
       <input
         placeholder="Search products..."
         type="text"
+        className="search-input"
         onKeyDown={handleChange} />
 
-      <button type="button" onClick={handleSubmit}>Submit</button>
+      <button className="search-button" type="button" onClick={handleSubmit}>Search</button>
     </div>
   )
 };
 
 const handleChange = e => {
+  console.log('hey');
     var string = "";
     var userInput = string += JSON.stringify(e.target.value);
 
