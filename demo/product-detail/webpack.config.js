@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3000/",
+    publicPath: "http://localhost:3009/",
   },
 
   resolve: {
@@ -12,11 +12,11 @@ module.exports = {
   },
 
   devServer: {
-    port: 3000,
-    historyApiFallback: true,
+    port: 3009,
   },
 
   module: {
+     
     rules: [
       {
         test: /\.m?js/,
@@ -27,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           name: '[name].[ext]'
         }  
@@ -48,18 +48,17 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "shell",
+      name: "productdetail",
       filename: "remoteEntry.js",
       remotes: {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js",
         "team-checkout": "checkout@http://localhost:3002/remoteEntry.js",
-       // "team-search": "search@http://localhost:3003/remoteEntry.js",
-        "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js",
+        "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js"
       },
       exposes: {
-        "./Store": "./src/store",
-        "./BaseStyles": "./src/styles/base.css"
+        "./ProductDetail": "./src/federated/ProductDetail",
+        "./ViewProductDetailButton": "./src/federated/ViewProductDetailButton",
       },
       shared: {
         ...deps,

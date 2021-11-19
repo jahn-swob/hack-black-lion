@@ -25,6 +25,13 @@ module.exports = {
         },
       },
       {
+        test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }  
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -46,7 +53,8 @@ module.exports = {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js",
         "team-checkout": "checkout@http://localhost:3002/remoteEntry.js",
-        "team-checkout-footer": "checkout-footer@http://localhost:3004/remoteEntry.js"
+        "team-checkout-footer": "checkout-footer@http://localhost:3004/remoteEntry.js",
+        "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js"
       },
       exposes: {
         "./Landing": "./src/federated/Landing",

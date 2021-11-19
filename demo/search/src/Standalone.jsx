@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import 'team-shell/BaseStyles';
 import "./styles/index.css";
 
-import { products } from 'team-landing/MockedProducts'
+//import { products } from 'team-landing/MockedProducts'
 
 import Search from "./federated/Search";
 

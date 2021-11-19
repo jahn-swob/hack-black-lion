@@ -6,6 +6,7 @@ import "./styles/index.css";
 
 const BuyButton = React.lazy(() => import("team-checkout/BuyButton"));
 const CheckoutFooter = React.lazy(() => import("team-checkout-footer/CheckoutFooter"));
+const ViewProductDetailButton = React.lazy(() => import("team-productdetail/ViewProductDetailButton"));
 
 const Main = () => {
   return (
@@ -21,6 +22,9 @@ const Main = () => {
             <React.Suspense fallback={<button>buy</button>}>
             <BuyButton payload={{name: item.name, price: item.price, description: item.description}}>BUY - ${item.price}</BuyButton>
             </React.Suspense>
+            <React.Suspense fallback={<button>view detail</button>}>
+            <ViewProductDetailButton payload={{detailItem: item}}>view detail</ViewProductDetailButton>
+          </React.Suspense>
             </div>
             )
         })
