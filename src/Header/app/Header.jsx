@@ -23,6 +23,7 @@ const NavLinks = ({location}) => {
 }
 
 const LinksWrapper = withRouter(NavLinks)
+let imageName = require('./logo.png');
 
 const Header = () => {
   return (
@@ -35,7 +36,7 @@ const Header = () => {
           </React.Suspense>
         </div>
         <Link to='/'>
-          <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Voltron_logo.png" className="header-logo" alt="logo" /><br/>
+          <img src={ imageName.default } className="header-logo" alt="logo" /><br/>
           <span>By black lion</span>
         </Link>
         <div className="cart-nav">

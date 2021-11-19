@@ -8,9 +8,13 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "wwwroot")
   },
-
   resolve: {
     extensions: [".jsx", ".js", ".json"],
+  },
+
+  devServer: {
+    port: 3005,
+    historyApiFallback: true,
   },
 
   module: {
@@ -21,6 +25,13 @@ module.exports = {
         resolve: {
           fullySpecified: false,
         },
+      },
+      {
+        test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
+        loader: 'url-loader',
+        options: {
+          name: '[name].[ext]'
+        }  
       },
       {
         test: /\.css$/i,
