@@ -27,7 +27,7 @@ const handleChange = e => {
 
 const handleSubmit = userInput => {
     // fetch(`https://localhost:55006/Search?q=${userInput.toLowerCase()}`)
-    fetch("https://localhost:7175/Search?q=plates")
+    fetch("https://localhost:3100/Search?q=plates")
       .then(res => res.json())
       .then(
         (result) => {
