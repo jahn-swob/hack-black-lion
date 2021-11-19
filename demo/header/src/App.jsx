@@ -15,5 +15,5 @@ const HeaderStandalone = () => (
   </Provider>
 );
 
-ReactDOM.render(<HeaderStandalone />, document.getElementById("app"));
+ReactDOM.render(<HeaderStandalone />, document.getElementById("header-app"));
 

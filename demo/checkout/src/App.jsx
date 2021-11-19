@@ -12,7 +12,7 @@ const CheckoutStandalone = () => (
   </Provider>
 );
 
-ReactDOM.render(<CheckoutStandalone />, document.getElementById("app"));
+ReactDOM.render(<CheckoutStandalone />, document.getElementById("checkout-app"));
 
 
 

@@ -4,7 +4,7 @@
   "scripts": {
     "deps": "yarn install",
     "build": "webpack --mode production",
-    "serve": "cd dist && PORT=3002 npx serve",
+    "serve": "cd dist && PORT=3003 npx serve",
     "start": "webpack-dev-server --open --mode development"
   },
   "devDependencies": {
