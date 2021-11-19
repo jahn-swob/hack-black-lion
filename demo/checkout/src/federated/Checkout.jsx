@@ -1,6 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom"
+
+const ProductDetail = React.lazy(() => import("team-productdetail/ProductDetail"));
 import "./../styles/index.css";
 
 const Checkout = ({items}) => {
@@ -12,6 +14,9 @@ const Checkout = ({items}) => {
       items.length > 0 ? (items.map((item, index) => {
         return (
           <div className="checkoutProduct" key={item.name + index}>
+            <React.Suspense fallback={<div>fallback product detail</div>}>
+             <ProductDetail key={item.sku+index} item = {item}/>
+           </React.Suspense>
             <div className="checkoutTitle">{item.name}</div>
         <div className="checkoutDescription">{item.description}</div>
             <div className="checkoutPrice">${item.price}</div>
