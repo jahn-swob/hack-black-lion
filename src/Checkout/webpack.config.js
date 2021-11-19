@@ -27,6 +27,13 @@ module.exports = {
         },
       },
       {
+        test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
+        loader: 'url-loader',
+        options: {
+          name: '[name].[ext]'
+        }  
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -47,7 +54,8 @@ module.exports = {
       remotes: {
         "team-shell": "shell@https://localhost:3000/remoteEntry.js",
         "team-landing": "landing@https://localhost:3001/remoteEntry.js",
-        "team-footers": "footers@https://localhost:3004/remoteEntry.js"
+        "team-footers": "footers@https://localhost:3004/remoteEntry.js",
+        "team-productdetail": "productdetail@https://localhost:3009/remoteEntry.js",
       },
       exposes: {
         "./Checkout": "./app/federated/Checkout",
