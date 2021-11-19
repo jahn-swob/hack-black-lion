@@ -6,6 +6,7 @@ import "./styles/index.css";
 
 const BuyButton = React.lazy(() => import("team-checkout/BuyButton"));
 const CheckoutFooter = React.lazy(() => import("team-footers/CheckoutFooter"));
+const ViewProductDetailButton = React.lazy(() => import("team-productdetail/ViewProductDetailButton"));
 import Product from "./federated/Product";
 
 const Main = () => {

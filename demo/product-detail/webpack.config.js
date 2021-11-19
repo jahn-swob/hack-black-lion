@@ -4,7 +4,7 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:3001/",
+    publicPath: "http://localhost:3009/",
   },
 
   resolve: {
@@ -12,10 +12,11 @@ module.exports = {
   },
 
   devServer: {
-    port: 3001,
+    port: 3009,
   },
 
   module: {
+     
     rules: [
       {
         test: /\.m?js/,
@@ -26,7 +27,7 @@ module.exports = {
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
-        loader: 'file-loader',
+        loader: 'url-loader',
         options: {
           name: '[name].[ext]'
         }  
@@ -47,18 +48,17 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "landing",
+      name: "productdetail",
       filename: "remoteEntry.js",
       remotes: {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js",
         "team-checkout": "checkout@http://localhost:3002/remoteEntry.js",
-        "team-footers": "footers@http://localhost:3004/remoteEntry.js",
         "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js"
       },
       exposes: {
-        "./Landing": "./src/federated/Landing",
-        "./MockedProducts": "./src/federated/mocks/products",
+        "./ProductDetail": "./src/federated/ProductDetail",
+        "./ViewProductDetailButton": "./src/federated/ViewProductDetailButton",
       },
       shared: {
         ...deps,

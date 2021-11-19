@@ -23,6 +23,10 @@ const reducer = (state = initialState, {type, payload}) =>
         const works = state.items.filter(val => val.includes(value));
         return { ...state, value, works };
       }
+     /* case 'productdetail/view': {
+        draft.detailItem = payload;
+        return draft;
+      }*/
       default: {
         return draft;
       }

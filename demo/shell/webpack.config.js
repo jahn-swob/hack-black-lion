@@ -26,6 +26,13 @@ module.exports = {
         },
       },
       {
+        test: /\.jpe?g$|\.gif$|\.png$|\.PNG$|\.svg$|\.woff(2)?$|\.ttf$|\.eot$/,
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]'
+        }  
+      },
+      {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
@@ -49,7 +56,8 @@ module.exports = {
         "team-checkout": "checkout@http://localhost:3002/remoteEntry.js",
         "team-search": "search@http://localhost:3003/remoteEntry.js",
         "team-header": "header@http://localhost:3005/remoteEntry.js",
-        "team-footers": "footers@http://localhost:3004/remoteEntry.js"
+        "team-footers": "footers@http://localhost:3004/remoteEntry.js",
+        "team-productdetail": "productdetail@http://localhost:3009/remoteEntry.js",
       },
       exposes: {
         "./Store": "./src/store",
