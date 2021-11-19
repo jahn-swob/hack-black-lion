@@ -7,7 +7,7 @@ const CheckoutFooter = () => {
         <div className="container">
             <div className="footer-cta pt-5 pb-5">
                 <div className="row">
-                    <div className="col-xl-4 col-md-4 mb-30">
+                    <div className="col-xl-4 col-md-4 mb-30 mobile-margin">
                         <div className="single-cta">
                             <i className="fas fa-map-marker-alt"></i>
                             <div className="cta-text">
@@ -16,7 +16,7 @@ const CheckoutFooter = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-4 col-md-4 mb-30">
+                    <div className="col-xl-4 col-md-4 mb-30 mobile-margin">
                         <div className="single-cta">
                             <i className="fas fa-phone"></i>
                             <div className="cta-text">
@@ -38,7 +38,7 @@ const CheckoutFooter = () => {
             </div>
             <div className="footer-content pt-5 pb-5">
                 <div className="row">
-                    <div className="col-xl-4 col-lg-4 mb-50">
+                    <div className="col-xl-4 col-lg-4 mb-50 mobile-margin">
                         <div className="footer-widget">
                             <div className="footer-logo">
                                 <img src="https://itshamy-web-icons.s3.us-west-2.amazonaws.com/black-lion.png" className="img-fluid" alt="logo" />
@@ -49,13 +49,13 @@ const CheckoutFooter = () => {
                             </div>
                             <div className="footer-social-icon">
                                 <span>Follow us</span>
-                                <a href="#"><i classaName="fab fa-facebook-f facebook-bg"></i></a>
+                                <a href="#"><i className="fab fa-facebook-f facebook-bg"></i></a>
                                 <a href="#"><i className="fab fa-twitter twitter-bg"></i></a>
                                 <a href="#"><i className="fab fa-google-plus-g google-bg"></i></a>
                             </div>
                         </div>
                     </div>
-                    <div className="col-xl-4 col-lg-4 col-md-6 mb-30">
+                    <div className="col-xl-4 col-lg-4 col-md-6 mb-30 mobile-margin">
                         <div className="footer-widget">
                             <div className="footer-widget-heading">
                                 <h3>Useful Links</h3>
@@ -99,7 +99,7 @@ const CheckoutFooter = () => {
                             <p>Copyright &copy; 2021, All Right Reserved</p>
                         </div>
                     </div>
-                    <div className="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+                    <div className="col-xl-6 col-lg-6 text-center text-lg-right">
                         <div className="footer-menu">
                             <ul>
                                 <li><a href="#">Corporate</a></li>

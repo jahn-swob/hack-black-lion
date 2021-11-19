@@ -4,9 +4,14 @@ import ReactDOM from "react-dom";
 import "./styles/index.css";
 // import store from "team-shell/Store";
 import CheckoutFooter from "./federated/CheckoutFooter";
+import ProductFooter from "./federated/ProductFooter";
 
 const FootersStandalone = () => (
-    <CheckoutFooter  />
+    <div>
+        <CheckoutFooter  />
+        <hr />
+        <ProductFooter  />
+    </div>
 );
 
 // const FootersStandalone = () => (

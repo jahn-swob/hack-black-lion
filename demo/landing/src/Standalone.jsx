@@ -5,6 +5,7 @@ import { products } from 'team-landing/MockedProducts';
 import "./styles/index.css";
 
 const BuyButton = React.lazy(() => import("team-checkout/BuyButton"));
+const CheckoutFooter = React.lazy(() => import("team-footers/CheckoutFooter"));
 import Product from "./federated/Product";
 
 const Main = () => {
@@ -20,6 +21,9 @@ const Main = () => {
         })
         }
         </div>
+        <React.Suspense fallback={<div>Loading footer</div>}>
+          <CheckoutFooter />
+        </React.Suspense>
       </div>
   )
 };

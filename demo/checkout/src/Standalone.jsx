@@ -4,6 +4,7 @@ import 'team-shell/BaseStyles';
 import "./styles/index.css";
 
 import { products } from 'team-landing/MockedProducts'
+const ProductFooter = React.lazy(() => import("team-footers/ProductFooter"));
 
 const Standalone = () => {
   return (
@@ -25,6 +26,9 @@ const Standalone = () => {
         <div className="checkoutTotal">{products.reduce((a, b) => (a + b.price), 0)}</div>
         </div>
       </div>
+      <React.Suspense fallback={<div>Loading footer</div>}>
+          <ProductFooter />
+        </React.Suspense>
     </div>
   )
 };

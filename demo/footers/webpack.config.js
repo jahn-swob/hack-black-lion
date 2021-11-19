@@ -47,6 +47,7 @@ module.exports = {
       },
       exposes: {
         "./CheckoutFooter": "./src/federated/CheckoutFooter",
+        "./ProductFooter": "./src/federated/ProductFooter"
       },
       shared: {
         ...deps,

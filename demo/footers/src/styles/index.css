@@ -1,3 +1,6 @@
+hr {
+    height: 50px;
+}
 ul {
     margin: 0px;
     padding: 0px;
@@ -153,4 +156,14 @@ ul {
 .footer-menu li a {
   font-size: 14px;
   color: #878787;
+}
+
+
+@media (max-width: 1024px) {
+    .mobile-margin{
+        margin-bottom: 40px;
+    }
+    .footer-social-icon{
+        margin-top: 40px;
+    }
 }
