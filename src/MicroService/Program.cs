@@ -52,7 +52,7 @@ namespace MicroService
                 app.UseSwaggerUI();
             }
 
-            app.UseCors();
+            app.UseCors(LocalOrigins);
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
