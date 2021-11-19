@@ -115,3 +115,4 @@ bin/
 obj/
 src/*/wwwroot/*
 !src/*/wwwroot/favicon.ico
+*.user
