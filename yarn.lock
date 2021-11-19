@@ -6000,7 +6000,7 @@ webpack-cli@3.3.11:
     v8-compile-cache "2.0.3"
     yargs "13.2.4"
 
-webpack-cli@^4.9.1:
+webpack-cli@4.9.1, webpack-cli@^4.9.1:
   version "4.9.1"
   resolved "https://registry.yarnpkg.com/webpack-cli/-/webpack-cli-4.9.1.tgz#b64be825e2d1b130f285c314caa3b1ba9a4632b3"
   integrity sha512-JYRFVuyFpzDxMDB+v/nanUdQYcZtqFPGzmlW4s+UkPMFhSpfRNmf1z4AwYcHJVdvEFAM7FFCQdNTpsBYhDLusQ==
