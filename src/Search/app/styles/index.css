@@ -1,0 +1,19 @@
+.search-bar-container{
+  border-bottom: 1px solid #efefef;
+}
+.search-input{
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding: 10px;
+}
+.search-button{
+  border: none;
+  outline: none;
+  border-radius: 0;
+  padding: 10px;
+  color: white;
+  background-color: #2196f3;
+  text-transform: uppercase;
+  font-weight: bold;
+}

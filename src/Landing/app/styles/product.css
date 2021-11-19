@@ -1,0 +1,23 @@
+.product {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: white;
+    border: 1px solid lightgray;
+    color: black;
+    font-weight: bold;
+    width: 140px;
+    height: 140px;
+}
+/*  .product:hover {
+    background: #2196f3;
+    color: white;
+  }*/
+.product h3{
+    font-size: 1.5em;
+}
+.product .price{
+    margin-bottom: 10px;
+}

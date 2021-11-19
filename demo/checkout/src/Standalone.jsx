@@ -27,8 +27,8 @@ const Standalone = () => {
         </div>
       </div>
       <React.Suspense fallback={<div>Loading footer</div>}>
-          <ProductFooter />
-        </React.Suspense>
+        <ProductFooter />
+      </React.Suspense>
     </div>
   )
 };
