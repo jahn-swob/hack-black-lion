@@ -4,11 +4,34 @@ namespace MicroService
 {
     public static class Program
     {
+        const string LocalOrigins = "_localorigins";
+
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy(LocalOrigins,
+                    builder =>
+                    {
+                        builder
+                            .WithOrigins(
+                                "https://localhost:3000",
+                                "https://localhost:3001",
+                                "https://localhost:3002",
+                                "https://localhost:3003",
+                                "https://localhost:3004",
+                                "https://localhost:3005",
+                                "https://localhost:3009",
+                                "https://localhost:3100")
+                            .AllowAnyHeader()
+                            .AllowAnyMethod()
+                            .AllowCredentials();
+                    });
+            });
+
             builder.Services.AddApplicationLayer();
 
             builder.Services.AddDomainLayer();
@@ -29,6 +52,7 @@ namespace MicroService
                 app.UseSwaggerUI();
             }
 
+            app.UseCors();
             app.UseHttpsRedirection();
 
             app.UseAuthorization();
