@@ -7,6 +7,7 @@ const Checkout = React.lazy(() => import("team-checkout/Checkout"));
 const Cart = React.lazy(() => import("team-checkout/Cart"));
 const ProductDetail = React.lazy(() => import("team-productdetail/ProductDetail"));
 const Header = React.lazy(() => import("team-header/Header"));
+const CheckoutFooter = React.lazy(() => import("team-footers/CheckoutFooter"));
 
 const LandingRoute = () => (
   <React.Suspense fallback={<div />}>
@@ -41,6 +42,9 @@ const Routes = () => {
           <ProductDetailRoute />
         </Route>
       </Switch>
+      <React.Suspense fallback={<div />}>
+        <CheckoutFooter />
+      </React.Suspense>
   </Router>)}
 
 export default Routes;

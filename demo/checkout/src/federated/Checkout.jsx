@@ -1,7 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import "./../styles/index.css";
+
+const ProductFooter = React.lazy(() => import("team-footers/ProductFooter"));
 
 const Checkout = ({items}) => {
   return (
@@ -21,6 +23,9 @@ const Checkout = ({items}) => {
       }
       { items.length > 0 && <div className="checkoutTotal">{items.reduce((a, b) => (a + b.price), 0)}</div> }
       </div>
+      <React.Suspense fallback={<div />}>
+        <ProductFooter />
+      </React.Suspense>
     </div>
   )
 };
