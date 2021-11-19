@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using FederatedExampleService.Models;
+using FederatedExampleService.Core.Application.Services;
+using FederatedExampleService.Models.Search;
 
 namespace FederatedExampleService.Controllers
 {
@@ -8,19 +9,20 @@ namespace FederatedExampleService.Controllers
     public class SearchController : ControllerBase
     {
         private readonly ILogger<SearchController> _logger;
+        private readonly ISearchService _search;
 
-        public SearchController(ILogger<SearchController> logger)
+        public SearchController(ILogger<SearchController> logger, ISearchService search)
         {
             _logger = logger;
+            _search = search;
         }
 
         [HttpGet]
         public async Task<SearchResponse> GetSearchResultAsync([FromQuery] SearchRequest request)
         {
-            if (request != null && request.Query != null)
-                return SearchResponse.FromDto();
-
-            return new SearchResponse();
+            var result = await _search.GetSearchAsync(request.ToDto());
+            var response = SearchResponse.FromDto(result);
+            return response;
         }
     }
 }
