@@ -45,7 +45,7 @@ module.exports = {
       remotes: {
         "team-shell": "shell@http://localhost:3000/remoteEntry.js",
         "team-landing": "landing@http://localhost:3001/remoteEntry.js",
-        "team-search": "Search@http://localhost:3003/remoteEntry.js",
+        "team-search": "search@http://localhost:3003/remoteEntry.js",
       },
       exposes: {
         "./Search": "./src/federated/Search"
