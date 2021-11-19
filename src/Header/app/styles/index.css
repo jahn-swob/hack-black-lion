@@ -1,14 +1,23 @@
+.header-logo{
+  width: 200px;
+}
 nav {
   display: flex;
   border-bottom-width: 0px;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  text-align: center;
 }
 .ecommerce-nav{
   display: flex;
   align-items: center;
   width: 33%;
+}
+.cart-nav{
+  display: flex;
+  justify-content: flex-end;
+  width: 33%
 }
 .nav-links{
   text-align: center;
@@ -17,7 +26,6 @@ nav {
 nav a {
   padding: 20px;
   color: rgb(0, 0, 0);
-  text-transform: uppercase;
   font-weight: bold;
 }
 
