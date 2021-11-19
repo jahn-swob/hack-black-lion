@@ -52,3 +52,4 @@ C:\Git\hack-black-lion\services\FederatedExampleService\obj\Debug\net6.0\Federat
 C:\Git\hack-black-lion\services\FederatedExampleService\obj\Debug\net6.0\ref\FederatedExampleService.dll
 C:\Git\hack-black-lion\services\FederatedExampleService\obj\Debug\net6.0\FederatedExampleService.pdb
 C:\Git\hack-black-lion\services\FederatedExampleService\obj\Debug\net6.0\FederatedExampleService.genruntimeconfig.cache
+C:\Git\hack-black-lion\services\FederatedExampleService\bin\Debug\net6.0\Serilog.dll
