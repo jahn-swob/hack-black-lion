@@ -4,6 +4,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./../styles/index.css";
 
+const ProductDetail = React.lazy(() => import("team-productdetail/ProductDetail"));
+
 const Cart = ({ items}) => {
   const [toggle, setToggle] = useState('');
   const toggleCart = () => {

@@ -1,24 +1,27 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import { Provider } from "react-redux";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./styles/index.css";
-// import store from "team-shell/Store";
 import CheckoutFooter from "./federated/CheckoutFooter";
 import ProductFooter from "./federated/ProductFooter";
-
-const FootersStandalone = () => (
-    <div>
-        <CheckoutFooter  />
-        <hr />
-        <ProductFooter  />
-    </div>
-);
+import store from "team-shell/Store";
 
 // const FootersStandalone = () => (
-//   <Provider store={store}>
-//     <CheckoutFooter  />
-//   </Provider>
+//     <div>
+//         <CheckoutFooter  />
+//         <hr />
+//         <ProductFooter  />
+//     </div>
 // );
+
+const FootersStandalone = () => (
+  <Provider store={store}>
+    <Router>
+        <CheckoutFooter  />
+    </Router>
+  </Provider>
+);
 
 ReactDOM.render(<FootersStandalone />, document.getElementById("footer-app"));
 
