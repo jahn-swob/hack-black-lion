@@ -43,6 +43,7 @@ module.exports = {
       name: "footers",
       filename: "remoteEntry.js",
       remotes: {
+        // "team-shell": "shell@http://localhost:3000/remoteEntry"
       },
       exposes: {
         "./CheckoutFooter": "./src/federated/CheckoutFooter",
