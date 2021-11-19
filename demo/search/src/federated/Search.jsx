@@ -17,7 +17,6 @@ export const Search = () => {
 };
 
 const handleChange = e => {
-  console.log('hey');
     var string = "";
     var userInput = string += JSON.stringify(e.target.value);
 
@@ -28,6 +27,15 @@ const handleChange = e => {
 
 const handleSubmit = userInput => {
     console.log("userInput", userInput)
+
+    searchProduct(userInput);
+}
+
+const searchProduct = userInput => dispatch => {
+  dispatch({
+    type: "search",
+    userInput: userInput
+  });
 }
 
 // const SearchButton = ({ payload, addToCart, children }) => (
@@ -39,4 +47,4 @@ const mapStateToPros = state => ({ items: state.items });
 // export default connect(null, (dispatch) => ({
 //   addToCart: (payload) => dispatch(buyItem(payload))
 // }))(BuyButton);
-export default connect(mapStateToPros)(Search);
+export default connect(mapStateToPros, {})(Search);
