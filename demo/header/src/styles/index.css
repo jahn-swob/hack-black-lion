@@ -3,12 +3,17 @@ nav {
   border-bottom-width: 0px;
   justify-content: space-between;
   align-items: center;
+  padding: 0 20px;
 }
 .ecommerce-nav{
   display: flex;
   align-items: center;
+  width: 33%;
 }
-
+.nav-links{
+  text-align: center;
+  width: 33%;
+}
 nav a {
   padding: 20px;
   color: rgb(0, 0, 0);
@@ -17,6 +22,8 @@ nav a {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 2.5rem;
+  font-weight: bolder;
   text-transform: uppercase;
+  width: 33%;
 }
