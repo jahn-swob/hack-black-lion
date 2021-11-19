@@ -27,13 +27,18 @@ const LinksWrapper = withRouter(NavLinks)
 const Header = () => {
   return (
     <header>
+      
       <nav>
-        <h1>Black Lion</h1>
-        <LinksWrapper />
-        <div className="ecommerce-nav">
+      <div className="ecommerce-nav">
           <React.Suspense fallback={<div/>}>
             <Search />
           </React.Suspense>
+        </div>
+        <Link to='/'>
+          <img src="https://upload.wikimedia.org/wikipedia/en/6/6b/Voltron_logo.png" className="header-logo" alt="logo" /><br/>
+          <span>By black lion</span>
+        </Link>
+        <div className="cart-nav">
           <React.Suspense fallback={<div />}>
             <Cart />
           </React.Suspense>

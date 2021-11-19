@@ -21,8 +21,8 @@ const reducer = (state = initialState, {type, payload}) =>
         console.log("YOU HAVE HIT THE SEARCH CASE!!");
         console.log("state", state, "type", type, "payload", payload);
         const { value } = type;
-        const works = state.items.filter(val => val.includes(value));
-        return { ...state, value, works };
+        const items = state.items.filter(val => val.includes(value));
+        return { ...state, value, items };
       }
       case 'landing/loadproducts': {
         draft.landingItems.push(payload);

@@ -28,13 +28,7 @@
 }
 
 .checkoutLink {
-  display: flex;
-  color: rgb(255, 255, 255);
-  width: 120px;
-  padding: 10px;
-  background: #2196f3;
-  align-items: center;
-  justify-content: center;
+  background: white;
 }
 
 .disabled {
@@ -48,12 +42,30 @@
   margin: 20px;
   font-weight: bold;
   justify-content: space-between;
+  position: relative;
 }
 
 .cartWrapper a {
   padding: 0px;
 }
-
+.cartWrapper .cart-icon{
+  width: 30px;
+}
+.content-count{
+  background: black;
+  border-radius: 100%;
+  color: white;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+}
+.no-content{
+  display: none;
+}
 .cart {
   background: black;
   color: white;
@@ -63,7 +75,36 @@
   align-items: center;
   justify-content: center;
 }
-
+.cart-drawer{
+  width: 500px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 1px solid;
+  background: white;
+  height: 100%;
+  transform: translateX(100%);
+  transition: 0.3s ease all;
+}
+.cart-drawer.opened{
+  transform: translateX(0%);
+  transition: 0.3s ease all;
+}
+.close-cart{
+  position: absolute;
+  top: 30px;
+  right: 30px;
+}
+.cart-product-list{
+  width: 350px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.single-product{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
 .checkoutList {
   display: flex;
   margin-top: 20px;

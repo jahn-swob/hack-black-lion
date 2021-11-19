@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import 'team-shell/BaseStyles';
 import "./styles/index.css";
 import Search from "./federated/Search";
-import { products } from 'team-landing/MockedProducts';
+// import { products } from 'team-landing/MockedProducts';
 
 const Standalone = () => {
   return (
@@ -15,8 +15,4 @@ const Standalone = () => {
   )
 };
 
-const mapStateToPros = state => ({
-  items: state.items
-})
-
-export default connect(mapStateToPros, { "search": "search" })(Standalone);
+export default Standalone;
