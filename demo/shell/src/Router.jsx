@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link, withRouter } from "react-
 const Landing = React.lazy(() => import("team-landing/Landing"));
 const Checkout = React.lazy(() => import("team-checkout/Checkout"));
 const Cart = React.lazy(() => import("team-checkout/Cart"));
-const Header = React.lazy(() => import("header/Header"));
+const Header = React.lazy(() => import("team-header/Header"));
 
 const LandingRoute = () => (
   <React.Suspense fallback={<div />}>
