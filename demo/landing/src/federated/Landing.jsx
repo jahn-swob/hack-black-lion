@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles/index.css";
+import { connect } from "react-redux";
 
 import { products } from 'team-landing/MockedProducts';
 const BuyButton = React.lazy(() => import("team-checkout/BuyButton"));
@@ -7,13 +8,15 @@ const ProductDetail = React.lazy(() => import("team-productdetail/ProductDetail"
 const ViewProductDetailButton = React.lazy(() => import("team-productdetail/ViewProductDetailButton"));
 import Product from './Product';
 
-const Landing = () => {
+const Landing = ({landingItems}) => {
+   
   return (
+    
     <div className="landingPage">
       <h2>Our Products</h2>
       <div className="productList">
       {
-      products.map((item, index) => {
+      landingItems.map((item, index) => {
         return (
           <div key={item.sku+index}>
           <React.Suspense fallback={<div>fallback product detail</div>}>
@@ -33,6 +36,10 @@ const Landing = () => {
       </div>
     </div>
   )
-};
 
-export default Landing
+};
+const mapStateToPros = state => ({
+  landingItems: state.landingItems
+})
+
+export default connect(mapStateToPros)(Landing);
