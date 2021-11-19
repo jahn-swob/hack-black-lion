@@ -2,7 +2,8 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import produce from 'immer';
 
-const initialState = {items: []}
+import { products } from 'team-landing/MockedProducts';
+const initialState = {items: [],landingItems:products}
 
 const reducer = (state = initialState, {type, payload}) =>
   produce(state, draft => {
@@ -23,10 +24,10 @@ const reducer = (state = initialState, {type, payload}) =>
         const works = state.items.filter(val => val.includes(value));
         return { ...state, value, works };
       }
-     /* case 'productdetail/view': {
-        draft.detailItem = payload;
+      case 'landing/loadproducts': {
+        draft.landingItems.push(payload);
         return draft;
-      }*/
+      }
       default: {
         return draft;
       }
