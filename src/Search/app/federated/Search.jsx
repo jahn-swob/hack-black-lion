@@ -26,13 +26,12 @@ const handleChange = e => {
 }
 
 const handleSubmit = userInput => {
-    // fetch(`https://localhost:55006/Search?q=${userInput.toLowerCase()}`)
-    fetch("https://localhost:7175/Search?q=plates")
+    fetch(`https://localhost:3100/Search?q=${userInput.toLowerCase()}`)
+    //fetch("https://localhost:3100/Search?q=plates")
         .then(res => res.json())
         .then(
             (result) => {
                 console.log("result", result); // we have the result!!
-                // searchProduct(result);
                 setResults(result);
             },
             (error) => {
@@ -40,11 +39,6 @@ const handleSubmit = userInput => {
             }
         )
 }
-
-// const SearchButton = ({ payload, setResults, children }) => (
-//   // <button className="checkoutButton" onClick={() => addToCart(payload)}>{children}</button>
-//   <button className="search-button" onClick={() => setResults(payload)}>Search</button>
-//   );
 
 function searchProduct(payload) {
     return { type: 'landing/loadproducts', payload }
