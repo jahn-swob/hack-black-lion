@@ -5,8 +5,7 @@ import "./styles/index.css";
 
 
 import Search from "./federated/Search";
-import { products } from 'team-landing/MockedProducts'
-import Search from './federated/Search'
+import { products } from 'team-landing/MockedProducts';
 
 const Standalone = () => {
   return (
