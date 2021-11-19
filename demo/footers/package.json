@@ -1,10 +1,10 @@
 {
-  "name": "team-search",
+  "name": "team-footers",
   "version": "1.0.0",
   "scripts": {
     "deps": "yarn install",
     "build": "webpack --mode production",
-    "serve": "cd dist && PORT=3003 npx serve",
+    "serve": "cd dist && PORT=3004 npx serve",
     "start": "webpack-dev-server --open --mode development"
   },
   "devDependencies": {
@@ -17,8 +17,8 @@
     "html-webpack-plugin": "^4.5.0",
     "style-loader": "1.2.1",
     "webpack": "5.0.0",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0"
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.5.0"
   },
   "dependencies": {
     "@babel/runtime": "^7.12.0",
@@ -26,7 +26,6 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-redux": "^7.2.1",
-    "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0"
   }

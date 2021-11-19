@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom"
 import "./../styles/index.css";
 
 const Checkout = ({items}) => {
@@ -16,9 +17,9 @@ const Checkout = ({items}) => {
             <div className="checkoutPrice">${item.price}</div>
           </div>
           )
-      }) ) : "Empty cart" 
+      }) ) : ( <div className="empty-checkout"><p>Your car is empty</p><Link to='/'>Start Shopping</Link></div>) 
       }
-      <div className="checkoutTotal">{items.reduce((a, b) => (a + b.price), 0)}</div>
+      { items.length > 0 && <div className="checkoutTotal">{items.reduce((a, b) => (a + b.price), 0)}</div> }
       </div>
     </div>
   )

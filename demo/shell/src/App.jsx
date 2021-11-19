@@ -5,13 +5,10 @@ import Router from "./Router";
 
 import "team-shell/BaseStyles";
 import store from "team-shell/Store";
-import "./styles/index.css";
 
 const Shell = () => (
   <Provider store={store}>
-    <div className="site">
-      <Router  />
-    </div>
+    <Router  />
   </Provider>
 );
 

@@ -1,12 +1,13 @@
 {
-  "name": "team-search",
+  "name": "team-header",
   "version": "1.0.0",
   "scripts": {
     "deps": "yarn install",
     "build": "webpack --mode production",
-    "serve": "cd dist && PORT=3003 npx serve",
+    "serve": "cd dist && PORT=3005 npx serve",
     "start": "webpack-dev-server --open --mode development"
   },
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.9.6",
     "@babel/plugin-transform-runtime": "^7.12.0",

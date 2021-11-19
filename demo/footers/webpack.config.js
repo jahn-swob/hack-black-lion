@@ -40,13 +40,14 @@ module.exports = {
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "landing",
+      name: "footers",
       filename: "remoteEntry.js",
       remotes: {
-        "team-shell": "shell@http://localhost:3000/remoteEntry.js"
+        // "team-shell": "shell@http://localhost:3000/remoteEntry"
       },
       exposes: {
-        "./CheckoutFooter": "./src/federated/CheckoutFooter"
+        "./CheckoutFooter": "./src/federated/CheckoutFooter",
+        "./ProductFooter": "./src/federated/ProductFooter"
       },
       shared: {
         ...deps,

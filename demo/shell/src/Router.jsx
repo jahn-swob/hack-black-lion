@@ -6,6 +6,7 @@ const Landing = React.lazy(() => import("team-landing/Landing"));
 const Checkout = React.lazy(() => import("team-checkout/Checkout"));
 const Cart = React.lazy(() => import("team-checkout/Cart"));
 const ProductDetail = React.lazy(() => import("team-productdetail/ProductDetail"));
+const Header = React.lazy(() => import("team-header/Header"));
 
 const LandingRoute = () => (
   <React.Suspense fallback={<div />}>
@@ -23,34 +24,12 @@ const ProductDetailRoute = () => (
   </React.Suspense>
 );
 
-const NavLinks = ({location}) => {
-  return (
-    <div className="links">
-      <Link to="/">
-        Landing page
-      </Link>
-      { location.pathname !== '/checkout' && (
-      <Link to="/checkout" >
-        Checkout
-      </Link>
-      )}
-    </div>
-  )
-}
-
-const LinksWrapper = withRouter(NavLinks)
-
 const Routes = () => {
   return (
   <Router>
-      <nav>
-        <LinksWrapper />
-        <div>
-        <React.Suspense fallback={<div />}>
-          <Cart />
-        </React.Suspense>
-        </div>
-      </nav>
+      <React.Suspense fallback={<div />}>
+        <Header />
+      </React.Suspense>
       <Switch>
         <Route path="/" exact>
           <LandingRoute />

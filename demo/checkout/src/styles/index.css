@@ -1,15 +1,23 @@
 .checkoutPage {
   padding: 20px;
-  border: 1px solid rgb(204, 204, 204);
   background: white;
 }
 
-h2 {
+.checkoutPage h2{
   margin: 0px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 2em;
 }
-
-.checkoutButton {
-  background: #000;
+.checkoutPage .empty-checkout{
+  text-align: center;
+}
+.checkoutPage .empty-checkout p{
+  margin-bottom: 30px;
+}
+.checkoutButton, .empty-checkout a {
+  background: #2196f3;
   color: white;
   border: none;
   padding: 10px;
